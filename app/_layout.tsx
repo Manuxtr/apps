@@ -1,5 +1,28 @@
 import { Stack } from "expo-router";
 
 export default function RootLayout() {
-  return <Stack />;
+  return (
+    <Stack>
+      <Stack.Screen
+        name="(tabs)"
+        options={{ 
+        headerShown: false,
+         }}/>
+
+      <Stack.Screen
+        name="index"
+        options={{ 
+        headerShown: false,
+        title: "Home"
+         }}/>
+
+      <Stack.Screen
+        name="About"
+        options={{ 
+        headerShown: false,
+        title: "About Unipeers"
+         }}/>
+
+    </Stack>
+  )
 }
