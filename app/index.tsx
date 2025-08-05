@@ -35,7 +35,7 @@ export default function About(){
 
         {/* third sub group */}
         <View>
-          <View>
+          <View> 
             <Text>1m+ users</Text>
           </View>
           <View>
