@@ -19,10 +19,17 @@ export default function RootLayout() {
          }}/>
 
       <Stack.Screen
-        name="About"
+        name="about"
         options={{ 
         headerShown: false,
         title: "About Unipeers"
+         }}/>
+
+        <Stack.Screen
+        name="event-details"
+        options={{ 
+        headerShown: false,
+        title: "Event Details"
          }}/>
 
     </Stack>
