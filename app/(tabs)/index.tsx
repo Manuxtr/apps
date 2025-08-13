@@ -1,5 +1,4 @@
 import { events } from "@/assets/local-data/events";
-import AntDesign from "@expo/vector-icons/AntDesign";
 import FontAwesome from "@expo/vector-icons/FontAwesome5";
 import { Link } from "expo-router";
 import { Dimensions, FlatList, Image, Text, View } from "react-native";
@@ -46,9 +45,9 @@ export default function index(){
                 <View className="flex flex-row justify-between">
                 <View className="flex flex-row items-center gap-x-2">
                 <FontAwesome name="user-circle" size={24} /> 
-                <Text>{item.createdBy}</Text>
+                <Text>{item.createdBy.length > 24 ? `${item.createdBy.slice(0,24)}...` : item.createdBy}</Text>
                 </View>
-                <Link href="/profile" className=" p-3 text-white font-bold bg-teal-800 rounded-md">
+                <Link href={`/event-details/${item.id}`} className=" p-3 text-white font-bold bg-teal-800 rounded-md">
                 <Text> Event Details</Text>
                 {/* <AntDesign name="arrowright" size={24} />  */}
                 </Link>

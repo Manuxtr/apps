@@ -17,7 +17,7 @@ export default function _Layout(){
         }} />
 
         <Tabs.Screen 
-        name="profile" 
+        name="profile"  
         options={{ 
             title: "Profile",
             headerShown: false,
