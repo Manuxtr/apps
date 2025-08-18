@@ -19,9 +19,9 @@ export default function index(){
     <SafeAreaProvider>
       <SafeAreaView>
         <FlatList 
-        data={events}
-        ItemSeparatorComponent={Seperator}
-        renderItem={({ item }) => {
+          data={events}
+          ItemSeparatorComponent={Seperator}
+          renderItem={({ item }) => {
           return (
             <View className="relative">
               <Image
@@ -57,7 +57,7 @@ export default function index(){
 
             </View>
           );
-        }}
+          }}
         />
 
       </SafeAreaView>
