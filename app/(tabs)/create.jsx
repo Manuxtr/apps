@@ -1,11 +1,11 @@
 import { HowtoCreateEvent } from "@/assets/local-data/how-create-events";
+import { schools } from "@/assets/local-data/school-list";
 import { formatTimestampToDate } from "@/utils/format-date.utils";
 import { themeColors } from "@/utils/theme.utils";
 import DateTimePicker from "@react-native-community/datetimepicker";
 import { useEffect, useState } from "react";
 import { Platform, ScrollView, StatusBar, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
-import schools from "@/assets/local-data/school-list"
-
+import RNPickerSelect from 'react-native-picker-select';
 const option = [
     {
         label:"Lagos",
@@ -14,14 +14,14 @@ const option = [
 ]
 
 
-export default function Create(){
+export default function Create() {
     const [title,setTitle]= useState("");
-    const[Description,setDescription]=useState("");
-    const[venue,setVenue]=useState("");
-    const[selectedSchool,setselectedSchool]=useState(null);
-    const[schoolOptions,setschoolOptions]=useState([]);
+    const [Description,setDescription]=useState("");
+    const [venue,setVenue]=useState("");
+    const [schoolOptions,setschoolOptions]=useState([]);
+    const [selectedSchool,setselectedSchool]=useState(null);
     const [date,setDate]=useState(new Date());
-    const[showPicker,setShowPicker]=useState(false);
+    const [showPicker,setShowPicker]=useState(false);
 
     // make a simple list of schools
     useEffect(() => {
@@ -97,8 +97,8 @@ export default function Create(){
                     {schoolOptions.length > 0 &&
                     <View>
                         <Text>Choose school where event will be held</Text>
-                        <RNPickersSelect
-                        items={schoolOptions}
+                        <RNPickerSelect
+                        items={schoolOptions} 
                         onValueChange={(item) => setselectedSchool(item)}
                         value={selectedSchool}/>
                     </View>}
