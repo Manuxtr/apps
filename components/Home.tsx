@@ -7,7 +7,7 @@ export default function Index(){
     <View style={introStyles.cover}>
       <ImageBackground
         style={introStyles.bg}
-        source={require("../assets/images/intro_bg.jpg")}>
+        source={require("../assets/images/intro_bg.jpg")}>  
         
         <View style={introStyles.layer}>
             <View style={introStyles.header}>
@@ -27,7 +27,7 @@ export default function Index(){
               <TouchableOpacity style={introStyles.btn}>
                 <Text style={introStyles.bodyText}>Get Started</Text>
               </TouchableOpacity>
-            
+             
             </View>
         </View>
       </ImageBackground>

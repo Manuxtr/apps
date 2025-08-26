@@ -55,7 +55,7 @@ export default function EventDetails(){
             </View>
 
             {/* body area */}
-            <View className="flex  justify-between gap-y-10 px-3">
+            <View className="flex  justify-between gap-y-4 px-3">
               <EventSnippet mainTitle={data.time} subTitle={data.date} iconName="event-note"/>
               <EventSnippet mainTitle={data.title} subTitle={data.createdBy} iconName="person"/>
               <EventSnippet mainTitle={decideFee(data.free,data.fee)} subTitle={convertTimestamp(data.createdAt)} iconName="account-balance-wallet"/>
@@ -78,6 +78,15 @@ export default function EventDetails(){
         </SafeAreaView>
       </SafeAreaProvider>
       )
-    }  
+    }else{
+      return(
+        <SafeAreaProvider>
+        <SafeAreaView style={{flex:1, paddingVertical:16,display:"flex",justifyContent:"space-between"}}></SafeAreaView>
+          <Text style={{fontSize:20}}>undefined</Text>
+        </SafeAreaProvider>
+      )
+    } 
+
+
 
   }
