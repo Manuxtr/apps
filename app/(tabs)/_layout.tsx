@@ -5,7 +5,7 @@ import { Tabs } from "expo-router";
 
 
 
-export default function _Layout(){
+export default function _Lgayout(){
   return(
     <Tabs screenOptions={{
       tabBarActiveTintColor: themeColors.darkGreen}}>
