@@ -16,8 +16,8 @@ const screenWidth = Dimensions.get("window").width;
 
 
 export  function EventSnippet({data}){
+  
   const [expandText,setExpandText]=useState(false);
-
 
   const [fontsLoaded]=useFonts({
     "Raleway-Bold":require("../assets/fonts/Raleway-Bold.ttf"),
