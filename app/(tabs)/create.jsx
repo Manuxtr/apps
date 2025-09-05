@@ -1,14 +1,11 @@
 import { HowtoCreateEvent } from "@/assets/local-data/how-create-events";
 import { schools } from "@/assets/local-data/school-list";
-import { formatTimestampToDate } from "@/utils/format-date.utils";
 import { themeColors } from "@/utils/theme.utils";
-import DateTimePicker from "@react-native-community/datetimepicker";
+import { addDoc, collection } from "firebase/firestore";
 import { useEffect, useState } from "react";
-import { Platform, ScrollView, StatusBar, StyleSheet, Text, TextInput, TouchableOpacity,View ,ActivityIndicator, Alert} from "react-native";
+import { ActivityIndicator, Alert, Platform, ScrollView, StatusBar, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 import RNPickerSelect from 'react-native-picker-select';
 import { db } from "../../config/firebase.config";
-import { addDoc } from "firebase/firestore";
-import { collection } from "firebase/firestore";
 
 
 const option = [
@@ -43,7 +40,7 @@ export default function Create() {
             date:"",
             createdBy:"anonymous",
             createdAt:new Date().getTime(),
-            imgUrl:"",
+            imgUrl:imgUrl,
             fee:fee
         })
         setLoading(false)
@@ -252,4 +249,4 @@ const styles=StyleSheet.create({
         fontWeight:"bold"
 
      }
-})
+});

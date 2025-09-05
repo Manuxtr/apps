@@ -39,7 +39,7 @@ export  function EventSnippet({data}){
         height:400,
         resizeMode:"cover"
        }}
-       source={{uri:data.bannerUrl}}
+       source={{uri:data.imgUrl}}
        alt="event photo"
        />
        {/* interactions */}
@@ -62,7 +62,7 @@ export  function EventSnippet({data}){
 
              {/* RIGHT OF INTERACTION */}
           <View className="flex flex-row items-center gap-x-3">
-            <Span>N20,000</Span>
+            <Span>{data.fee}</Span>
             <Link href={`/event-details/[${data.id}]`}>
                 <Feather name="arrow-up-right" size={24} color="black"/>
             </Link>
